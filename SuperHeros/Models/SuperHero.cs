@@ -11,9 +11,13 @@ namespace SuperHeros.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Alter Ego")]
         public string alterEgo { get; set; }
+        [Display(Name = "Primary Ability")]
         public string primarySuperheroAbility { get; set; }
+        [Display(Name = "Secondary Ability")]
         public string secondarySuperheroAbility { get; set; }
+        [Display(Name = "Catchpharse")]
         public string catchpharse { get; set; }
     }
 }

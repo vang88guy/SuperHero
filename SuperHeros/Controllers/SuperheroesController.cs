@@ -25,8 +25,8 @@ namespace SuperHeros.Controllers
         // GET: Superheroes/Details/5
         public ActionResult Details(int id)
         {
-            
-            return View();
+            var hero = db.SuperHeroes.Where(h => h.Id == id).FirstOrDefault();
+            return View(hero);
         }
 
         // GET: Superheroes/Create
@@ -56,17 +56,27 @@ namespace SuperHeros.Controllers
         // GET: Superheroes/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var hero = db.SuperHeroes.Where(h => h.Id == id).FirstOrDefault();
+            return View(hero);
         }
 
         // POST: Superheroes/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, SuperHero hero)
         {
+            var newhero = db.SuperHeroes.Where(h => h.Id == id).FirstOrDefault();
             try
             {
                 // TODO: Add update logic here
-
+                db.SuperHeroes.Remove(newhero);
+                db.SaveChanges();
+                newhero.Name = hero.Name;
+                newhero.alterEgo = hero.alterEgo;
+                newhero.primarySuperheroAbility = hero.primarySuperheroAbility;
+                newhero.secondarySuperheroAbility = hero.secondarySuperheroAbility;
+                newhero.catchpharse = hero.catchpharse;
+                db.SuperHeroes.Add(newhero);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<SuperHeros.Models.SuperHero>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Super Heroes";
 }
 
 <h2>Index</h2>
@@ -15,16 +15,16 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.alterEgo)
+            @Html.DisplayNameFor(model => model.AlterEgo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.primarySuperheroAbility)
+            @Html.DisplayNameFor(model => model.PrimarySuperheroAbility)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.secondarySuperheroAbility)
+            @Html.DisplayNameFor(model => model.SecondarySuperheroAbility)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.catchpharse)
+            @Html.DisplayNameFor(model => model.Catchpharse)
         </th>
         <th></th>
     </tr>
@@ -35,16 +35,16 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.alterEgo)
+            @Html.DisplayFor(modelItem => item.AlterEgo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.primarySuperheroAbility)
+            @Html.DisplayFor(modelItem => item.PrimarySuperheroAbility)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.secondarySuperheroAbility)
+            @Html.DisplayFor(modelItem => item.SecondarySuperheroAbility)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.catchpharse)
+            @Html.DisplayFor(modelItem => item.Catchpharse)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

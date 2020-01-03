@@ -36,10 +36,10 @@ namespace SuperHeros.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        alterEgo = c.String(),
-                        primarySuperheroAbility = c.String(),
-                        secondarySuperheroAbility = c.String(),
-                        catchpharse = c.String(),
+                        AlterEgo = c.String(),
+                        PrimarySuperheroAbility = c.String(),
+                        SecondarySuperheroAbility = c.String(),
+                        Catchpharse = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

@@ -71,10 +71,10 @@ namespace SuperHeros.Controllers
                 db.SuperHeroes.Remove(newhero);
                 db.SaveChanges();
                 newhero.Name = hero.Name;
-                newhero.alterEgo = hero.alterEgo;
-                newhero.primarySuperheroAbility = hero.primarySuperheroAbility;
-                newhero.secondarySuperheroAbility = hero.secondarySuperheroAbility;
-                newhero.catchpharse = hero.catchpharse;
+                newhero.AlterEgo = hero.AlterEgo;
+                newhero.PrimarySuperheroAbility = hero.PrimarySuperheroAbility;
+                newhero.SecondarySuperheroAbility = hero.SecondarySuperheroAbility;
+                newhero.Catchpharse = hero.Catchpharse;
                 db.SuperHeroes.Add(newhero);
                 db.SaveChanges();
                 return RedirectToAction("Index");

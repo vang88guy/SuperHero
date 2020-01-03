@@ -24,6 +24,7 @@ namespace SuperHeros
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstraphero.css",
+                      "~/Content/navbar.css",
                       "~/Content/site.css"));
         }
     }
